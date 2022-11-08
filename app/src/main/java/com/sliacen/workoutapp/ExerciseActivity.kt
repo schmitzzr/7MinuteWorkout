@@ -23,16 +23,16 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     private var restTimer: CountDownTimer? = null
     private var restProgress = 0
-    private val maxRestTime = Settings.restLength    // total seconds of rest time
+    private val maxRestTime = 10   // total seconds of rest time
 
     private var exerciseTimer: CountDownTimer? = null
     private var exerciseProgress = 0
-    private val maxExerciseTime = Settings.exerciseLength   // total seconds of exercise time
+    private val maxExerciseTime = 30   // total seconds of exercise time
 
     private var exerciseList: ArrayList<ExerciseModel>? = null
     private var currentExercisePosition = -1
 
-    private var soundSetting = Settings.audioSetting
+    private var soundSetting = true
     private var tts: TextToSpeech? = null
     private var player: MediaPlayer? = null
 
